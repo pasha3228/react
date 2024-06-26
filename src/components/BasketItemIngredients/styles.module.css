@@ -1,0 +1,9 @@
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredient {
+    display: flex;
+    justify-content: space-between;
+}

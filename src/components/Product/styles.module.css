@@ -1,0 +1,55 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productName {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.actions {
+    display: flex;
+    width: 75px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action {
+    border: 1px solid rgb(0 0 0 / 40%);
+    width: 24px;
+    height: 24px;
+    background-color: inherit;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.action:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.details {
+    margin-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.increment {
+    background-image: url("./imgs/thumb-up.svg");
+}
+
+.decrement {
+    background-image: url("./imgs/thumb-down.svg");
+}
+
+.action:hover > .decrementComponent > g {
+    fill: red;
+}
