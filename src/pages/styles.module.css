@@ -1,12 +1,8 @@
 .root {
   display: flex;
   flex-direction: column;
-  color: red;
 }
-.but {
-  color: green;
-  background-color: yellow;
-}
+
 .root::after {
   content: "";
 }
