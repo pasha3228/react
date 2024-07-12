@@ -9,7 +9,14 @@ const Restaurants = ({ restaurants }) => {
   const openNextRestaurant = () => {
     setActiveRestaurant({ active: activeRestaurant.active + 1 })
   }
-
+  const handleRestaurantClick = (index) => {
+    setActiveRestaurant({ active: index })
+  }
+  const restaurantButtons = restaurants.map((restaurant, index) => (
+    <button className={styles.but} key={restaurant.id} onClick={() => handleRestaurantClick(index)}>
+      {restaurant.name}
+    </button>
+  ))
   if (!restaurants.length) {
     return null
   }
@@ -17,6 +24,7 @@ const Restaurants = ({ restaurants }) => {
   return (
     <div className={styles.root}>
       <h2>Restaurants</h2>
+      <div>{restaurantButtons}</div>
       <button onClick={openNextRestaurant}>Next Restaurant</button>
       <div>
         <div key={restaurants[activeRestaurant.active].id}>
