@@ -1,4 +1,7 @@
 import React from "react"
+import { NewReviewForm } from "../NewReviewForm/NewReviewForm"
+
+import styles from "./styles.module.css"
 
 const Reviews = ({ reviews }) => (
   <dl>
@@ -8,6 +11,7 @@ const Reviews = ({ reviews }) => (
         <dd>{text}</dd>
       </React.Fragment>
     ))}
+    <NewReviewForm className={styles.reviews} />
   </dl>
 )
 

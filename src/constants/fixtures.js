@@ -20,36 +20,6 @@ export const restaurants = [
         name: "Samosa",
         price: 8,
         ingredients: ["chicken", "bread"]
-      },
-      {
-        id: "25402233-0095-49ea-9939-1e67ed89ffb9",
-        name: "Margarita",
-        price: 9,
-        ingredients: ["bread", "cheese", "tomatoes"]
-      },
-      {
-        id: "90902233-0095-49ea-9939-1e67ed89ffb9",
-        name: "Chef pizza",
-        price: 10,
-        ingredients: ["bread", "cheese", "tomatoes", "chicken"]
-      },
-      {
-        id: "08c9ffa0-d003-4310-9e15-20978743296e",
-        name: "Cinnamon buns",
-        price: 5,
-        ingredients: ["bread"]
-      },
-      {
-        id: "64a4967c-2080-4a99-9074-4655a4569a95",
-        name: "Semlor",
-        price: 2,
-        ingredients: ["bread", "cream"]
-      },
-      {
-        id: "4bc8528e-26d1-46c3-a522-8e18d10c8c84",
-        name: "Saffron bun",
-        price: 4,
-        ingredients: ["bread"]
       }
     ],
     reviews: [

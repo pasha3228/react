@@ -1,19 +1,38 @@
+import React, { Suspense } from "react"
 import styles from "./styles.module.css"
 import classnames from "classnames"
 import useCount from "../../hooks/useCount"
 
-const Product = ({ name, className }) => {
+import ThumbUp from "./imgs/thumb-up.svg"
+import { ReactComponent as ThumbDown } from "./imgs/thumb-down.svg"
+
+const IngredientsWithMemo = React.lazy(() => import("../Ingredients/Ingredients"))
+
+const Product = ({ name, ingredients, setRef, className }) => {
   const { count, increment, decrement } = useCount(0)
 
   return (
-    <div className={classnames(styles.root, className)}>
-      <span>{name}</span>
+    <div ref={setRef} className={classnames(styles.root, className)}>
+      <div className={styles.product}>
+        <span className={styles.productName}>{name}</span>
 
-      <div>
-        <button onClick={decrement}>-</button>
-        {count}
-        <button onClick={increment}>+</button>
+        <div className={styles.actions}>
+          <button onClick={decrement} className={classnames(styles.action)}>
+            {/*<img src={ThumbUp} loading="lazy" />*/}-
+          </button>
+          {count}
+          <button onClick={increment} className={classnames(styles.action)}>
+            {/*<ThumbDown className={styles.decrementComponent} />*/}+
+          </button>
+        </div>
       </div>
+      {count > 0 && (
+        <div className={styles.details}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <IngredientsWithMemo ingredients={ingredients} />
+          </Suspense>
+        </div>
+      )}
     </div>
   )
 }
