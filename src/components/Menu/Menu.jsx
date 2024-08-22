@@ -1,14 +1,14 @@
 import React from "react"
-import Product from "../Product/Product"
+import { ProductContainer } from "../../containers/Product/ProductContainer"
 import styles from "./styles.module.css"
 
-const Menu = ({ menu }) => {
+const Menu = ({ productIds }) => {
   return (
     <div className={styles.root}>
       <span className={styles.title}>Menu</span>
       <div className={styles.content}>
-        {menu.map(({ id, name, ingredients }) => (
-          <Product key={id} name={name} ingredients={ingredients} className={styles.product} />
+        {productIds.map((id) => (
+          <ProductContainer key={id} productId={id} className={styles.product} />
         ))}
       </div>
     </div>

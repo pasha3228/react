@@ -3,21 +3,26 @@ import Reviews from "../Reviews/Reviews"
 import React, { useMemo } from "react"
 import styles from "./styles.module.css"
 import { Rating } from "../Rating/Rating"
+import { MenuContainer } from "../../containers/Menu/MenuContainer"
 
-const Restaurant = ({ restaurant }) => {
-  const restaurantRate = useMemo(
-    () => Math.ceil(restaurant.reviews.reduce((prev, curr) => prev + curr.rating, 0) / restaurant.reviews.length),
-    [restaurant.reviews]
-  )
+const Restaurant = ({ restaurantId, name }) => {
+  // const restaurantRate = useMemo(
+  //   () =>
+  //     Math.ceil(
+  //       restaurant.reviews.reduce((prev, curr) => prev + curr.rating, 0) /
+  //         restaurant.reviews.length
+  //     ),
+  //   [restaurant.reviews]
+  // );
 
   return (
     <div className={styles.root}>
       <div className={styles.restaurantInfo}>
-        <div className={styles.title}>{restaurant.name}</div>
-        <Rating value={restaurantRate} />
+        <div className={styles.title}>{name}</div>
+        {/*<Rating value={restaurantRate} />*/}
       </div>
-      <Menu menu={restaurant.menu} />
-      <Reviews reviews={restaurant.reviews} />
+      <MenuContainer restaurantId={restaurantId} />
+      {/*<Reviews reviews={restaurant.reviews} />*/}
     </div>
   )
 }

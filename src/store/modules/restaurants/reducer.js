@@ -1,10 +1,16 @@
-import { RESTAURANTS_ACTIONS } from "./actions"
-import { restaurants } from "../../../constants/fixtures"
+import { normalizedRestaurants } from "../../../constants/normalized-fixtures"
 
-export const restaurantsReducer = (state = restaurants, action) => {
-  switch (action.type) {
-    case RESTAURANTS_ACTIONS.AddRestaurants:
-      return [...state, action.payload]
+const initialState = {
+  entities: normalizedRestaurants.reduce((acc, restaurant) => {
+    acc[restaurant.id] = restaurant
+
+    return acc
+  }, {}),
+  ids: normalizedRestaurants.map(({ id }) => id)
+}
+
+export const restaurantsReducer = (state = initialState, action) => {
+  switch (action?.type) {
     default:
       return state
   }
