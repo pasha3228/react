@@ -1,7 +1,7 @@
 import React from "react"
 import Product from "../../components/Product/Product"
 import { useSelector } from "react-redux"
-import { selectProductById } from "../../custom-store/modules/products/selectors"
+import { selectProductById } from "../../store/modules/products/selectors"
 
 export const ProductContainer = ({ productId, className }) => {
   const product = useSelector((state) => selectProductById(state, productId))

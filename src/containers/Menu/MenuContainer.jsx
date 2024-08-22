@@ -1,7 +1,7 @@
 import React from "react"
 import Menu from "../../components/Menu/Menu"
 import { useSelector } from "react-redux"
-import { selectRestaurantProductIdsById } from "../../custom-store/modules/restaurants/selectors"
+import { selectRestaurantProductIdsById } from "../../store/modules/restaurants/selectors"
 
 export const MenuContainer = ({ restaurantId }) => {
   const productIds = useSelector((state) => selectRestaurantProductIdsById(state, restaurantId))

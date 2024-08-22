@@ -1,7 +1,7 @@
 import React from "react"
 import Tabs from "../../components/Tabs/Tabs"
 import { useSelector } from "react-redux"
-import { selectRestaurantIds } from "../../custom-store/modules/restaurants/selectors"
+import { selectRestaurantIds } from "../../store/modules/restaurants/selectors"
 import { RestaurantTabContainer } from "../RestaurantTab/RestaurantTabContainer"
 
 export const RestaurantTabsContainer = ({ activeTabIndex, onClick }) => {
