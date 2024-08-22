@@ -1,13 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import React from "react"
+import ReactDOM from "react-dom/client"
+import "./index.css"
 
-import Restaurants from "./pages/Restaurants"
-import {restaurants} from "./constants/fixtures"
+import RestaurantsPage from "./pages/RestaurantsPage/RestaurantsPage"
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"))
 
-root.render(<Restaurants restaurants={restaurants} />);
+root.render(<RestaurantsPage />)
 
 // <div>
 //   <h1>

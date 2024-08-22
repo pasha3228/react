@@ -2,6 +2,7 @@ import Menu from "../Menu/Menu"
 import Reviews from "../Reviews/Reviews"
 import React, { useMemo } from "react"
 import styles from "./styles.module.css"
+import { Rating } from "../Rating/Rating"
 
 const Restaurant = ({ restaurant }) => {
   const restaurantRate = useMemo(
@@ -11,8 +12,10 @@ const Restaurant = ({ restaurant }) => {
 
   return (
     <div className={styles.root}>
-      <div>{restaurant.name}</div>
-      <div>{restaurantRate}</div>
+      <div className={styles.restaurantInfo}>
+        <div className={styles.title}>{restaurant.name}</div>
+        <Rating value={restaurantRate} />
+      </div>
       <Menu menu={restaurant.menu} />
       <Reviews reviews={restaurant.reviews} />
     </div>

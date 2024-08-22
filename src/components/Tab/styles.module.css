@@ -1,14 +1,14 @@
 .root {
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 5px 10px;
-  background-color: white;
-  transition: 0.2s;
+  border: none;
+  background-color: #ffffff00;
+  transition: 0.1s;
+  font-size: 18px;
+  padding: 30px;
 }
 
 .root:hover {
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .root:disabled {
@@ -17,5 +17,5 @@
 }
 
 .isActive {
-  border: 1px solid red;
+  font-weight: 700;
 }
