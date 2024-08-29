@@ -4,6 +4,7 @@ import React, { useMemo } from "react"
 import styles from "./styles.module.css"
 import { Rating } from "../Rating/Rating"
 import { MenuContainer } from "../../containers/Menu/MenuContainer"
+import { ReviewsContainer } from "../../containers/Reviews/ReviewsContainer"
 
 const Restaurant = ({ restaurantId, name }) => {
   // const restaurantRate = useMemo(
@@ -22,7 +23,7 @@ const Restaurant = ({ restaurantId, name }) => {
         {/*<Rating value={restaurantRate} />*/}
       </div>
       <MenuContainer restaurantId={restaurantId} />
-      {/*<Reviews reviews={restaurant.reviews} />*/}
+      <ReviewsContainer restaurantId={restaurantId} />
     </div>
   )
 }

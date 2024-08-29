@@ -5,5 +5,6 @@ import { selectRestaurantProductIdsById } from "../../store/modules/restaurants/
 
 export const MenuContainer = ({ restaurantId }) => {
   const productIds = useSelector((state) => selectRestaurantProductIdsById(state, restaurantId))
+
   return <Menu productIds={productIds} />
 }

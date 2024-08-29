@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import styles from "./styles.module.css"
 import { RestaurantContainer } from "../../containers/Restaurant/RestaurantContainer"
 import { RestaurantTabsContainer } from "../../containers/RestaurantTabs/RestaurantTabsContainer"
+import { ReviewsContainer } from "../../containers/Reviews/ReviewsContainer"
 
 export const Restaurants = ({ restaurantIds }) => {
   const [activeRestaurantIndex, setActiveRestaurantIndex] = useState(0)
