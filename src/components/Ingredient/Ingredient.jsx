@@ -2,9 +2,8 @@ import styles from "./styles.module.css"
 import classnames from "classnames"
 import useIngredientCount from "../../hooks/useIngredientCount"
 
-export const Ingredient = ({ ingredient, className }) => {
-  console.log("Render Ingredient")
-  const { count, decrement, increment } = useIngredientCount({
+export const Ingredient = ({ ingredient, className, increment, count }) => {
+  const { decrement } = useIngredientCount({
     defaultValue: 1
   })
 

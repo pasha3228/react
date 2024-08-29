@@ -1,4 +1,4 @@
-export const selectRestaurantsModuleState = (state) => state.restaurants
+export const selectRestaurantsModuleState = (state) => state.collections.restaurants
 
 export const selectRestaurantIds = (state) => selectRestaurantsModuleState(state).ids
 

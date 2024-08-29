@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ingredients {
+  margin-top: 20px;
+}

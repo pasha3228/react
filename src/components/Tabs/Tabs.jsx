@@ -1,10 +1,11 @@
 import React from "react"
 
 import styles from "./styles.module.css"
+import classnames from "classnames"
 
-const Tabs = ({ tabIds, activeTabIndex, onClick, renderTab }) => {
+const Tabs = ({ tabIds, activeTabIndex, onClick, renderTab, className }) => {
   return (
-    <div className={styles.root}>
+    <div className={classnames(styles.root, className)}>
       {tabIds.map((id, index) =>
         renderTab({
           id,

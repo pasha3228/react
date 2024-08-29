@@ -1,4 +1,4 @@
-import { normalizedRestaurants } from "../../../constants/normalized-fixtures"
+import { normalizedRestaurants } from "../../../../constants/normalized-fixtures"
 
 const initialState = {
   entities: normalizedRestaurants.reduce((acc, restaurant) => {

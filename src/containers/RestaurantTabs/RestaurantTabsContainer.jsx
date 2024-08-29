@@ -1,10 +1,10 @@
 import React from "react"
 import Tabs from "../../components/Tabs/Tabs"
 import { useSelector } from "react-redux"
-import { selectRestaurantIds } from "../../store/modules/restaurants/selectors"
+import { selectRestaurantIds } from "../../store/modules/collections/restaurants/selectors"
 import { RestaurantTabContainer } from "../RestaurantTab/RestaurantTabContainer"
 
-export const RestaurantTabsContainer = ({ activeTabIndex, onClick }) => {
+export const RestaurantTabsContainer = ({ activeTabIndex, onClick, className }) => {
   const restaurantIds = useSelector(selectRestaurantIds)
 
   return (
@@ -21,6 +21,7 @@ export const RestaurantTabsContainer = ({ activeTabIndex, onClick }) => {
       tabIds={restaurantIds}
       activeTabIndex={activeTabIndex}
       onClick={onClick}
+      className={className}
     />
   )
 }
