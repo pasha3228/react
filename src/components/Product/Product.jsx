@@ -8,8 +8,8 @@ import { ReactComponent as ThumbDown } from "./imgs/thumb-down.svg"
 
 const IngredientsWithMemo = React.lazy(() => import("../Ingredients/Ingredients"))
 
-const Product = ({ productId, name, ingredients, setRef, className, increment, count }) => {
-  const { decrement } = useCount(0)
+const Product = ({ productId, name, ingredients, setRef, className, increment, decrement, count }) => {
+  /* const { decrement } = useCount(0) */
 
   return (
     <div ref={setRef} className={classnames(styles.root, className)}>
