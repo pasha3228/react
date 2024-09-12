@@ -8,6 +8,7 @@ export const BasketItem = ({ productId, productName, productCount, className }) 
     <div className={classnames(className, styles.root)}>
       <div className={styles.product}>
         <span>{productName}</span>
+
         <span>{productCount}</span>
       </div>
       <BasketItemIngredientsContainer productId={productId} className={styles.ingredients} />

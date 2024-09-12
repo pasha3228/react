@@ -2,6 +2,7 @@ import { createStore } from "redux"
 import { restaurantsReducer } from "./modules/collections/restaurants/reducer"
 import { productReducer } from "./modules/collections/products/reducer"
 import { basketReducer } from "./modules/basket/reducer"
+import { priceReducer } from "./modules/collections/price/reducer"
 
 const rootInitialState = {
   collections: {}
@@ -12,6 +13,7 @@ const rootReducer = (state = rootInitialState, action) => {
     collections: {
       restaurants: restaurantsReducer(state.collections.restaurants, action),
       product: productReducer(state.collections.product, action)
+      /* price: priceReducer(state.collections.product.price, action) */
     },
     basket: basketReducer(state.basket, action)
   }
@@ -21,4 +23,7 @@ const rootReducer = (state = rootInitialState, action) => {
   return newState
 }
 
-export const store = createStore(rootReducer)
+export const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)

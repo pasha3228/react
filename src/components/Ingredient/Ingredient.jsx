@@ -2,10 +2,10 @@ import styles from "./styles.module.css"
 import classnames from "classnames"
 import useIngredientCount from "../../hooks/useIngredientCount"
 
-export const Ingredient = ({ ingredient, className, increment, count }) => {
-  const { decrement } = useIngredientCount({
+export const Ingredient = ({ ingredient, className, increment, count, decrement }) => {
+  /* const { decrement } = useIngredientCount({
     defaultValue: 1
-  })
+  }) */
 
   return (
     <div className={classnames(styles.root, className)}>
